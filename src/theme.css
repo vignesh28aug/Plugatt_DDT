@@ -1,0 +1,10 @@
+@font-face {
+  font-family: rubik;
+  src: url(./assets/fonts/Rubik/Rubik-VariableFont_wght.ttf);
+}
+.MuiTypography-root {
+  font-family: rubik !important;
+}
+.text_muted {
+  color: #6c7293 !important;
+}

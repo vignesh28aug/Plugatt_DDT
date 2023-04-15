@@ -1,0 +1,96 @@
+body {
+  --secondary: #121212;
+  --primary: #36c1bd;
+}
+.navbar_buttons {
+  display: flex;
+  align-items: center;
+  margin: 10px 5px;
+  margin-left: 2px;
+  cursor: pointer;
+  padding: 8px 15px;
+  text-decoration: none;
+  color: #6c7293;
+}
+.navbar_buttons:hover,
+.navbtns_conatiner .active {
+  color: white;
+  padding: 8px 15px;
+  margin-left: 0;
+  border-left: 2px solid #0078c1;
+  border-bottom-right-radius: 20px;
+  border-top-right-radius: 20px;
+  background-color: #0f1015;
+}
+.navbar_buttons:hover .css-i4bv87-MuiSvgIcon-root,
+.navbtns_conatiner .active .css-i4bv87-MuiSvgIcon-root {
+  color: white;
+}
+/* Ripple effect */
+.ripple {
+  background-position: center;
+  transition: background 0.8s;
+}
+.ripple:active {
+  background-size: 100%;
+  transition: background 0s;
+}
+.navbar_profile_section {
+  /* padding: 5px 10px; */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+.disabled-link {
+  pointer-events: none;
+  color: rgb(164, 164, 164);
+}
+.disabled-link svg {
+  color: rgb(164, 164, 164);
+}
+
+.footer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: black;
+  height: 10vh;
+}
+.footer_title {
+  font-size: 15px !important;
+  color: aliceblue;
+}
+.footer_subtitle {
+  margin-left: 5px !important;
+  font-size: 12px !important;
+  color: aliceblue;
+}
+.icon_navbar {
+  background-color: #22242e;
+  border-radius: 20px;
+  padding: 5px;
+  padding-bottom: 0;
+}
+.icon_navbar svg {
+  font-size: 15px;
+}
+
+@media only screen and (max-width: 600px) {
+  .footer {
+    display: flex;
+    flex-direction: column;
+  }
+}
+.navtop {
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
+  align-items: center;
+}
+.navtop {
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
+  align-items: center;
+}

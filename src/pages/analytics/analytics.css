@@ -1,0 +1,26 @@
+.analyticsDetails {
+  padding: 10px !important;
+  background-color: #191c24;
+  /* background-color: #00d25b; */
+  border-radius: 5px;
+  /* margin-right: 5px !important; */
+}
+/* .analyticsRight {
+  width: 100px;
+} */
+.analyticsBottom {
+  height: 290px;
+}
+.analyticsTop {
+  height: 200px;
+}
+.analyticsRight{
+  display: flex;
+  justify-content: space-between;
+  /* width: 100%; */
+  padding: 25px 20px;
+  align-items: center;
+  margin: 0%;
+  border-radius: 5px;
+  height: 183px;
+}
