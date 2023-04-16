@@ -14,12 +14,11 @@ function AnalyticsIndex() {
           <AnalyticsDetails />
         </Grid>
       </Grid>
-        
+
       <Grid container>
-      <Grid item  md={12}>
-         <Map />
+        <Grid item md={12}>
+          <Map />
         </Grid>
-     
       </Grid>
     </div>
   );

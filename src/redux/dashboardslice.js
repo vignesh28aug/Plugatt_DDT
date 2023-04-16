@@ -42,6 +42,14 @@ const initialState = {
       message: "",
     },
   },
+  analytics: {
+    selectedItem: {
+      id: 0,
+      totalCities: 0,
+      totalVoltage: 0,
+      value: 0,
+    },
+  },
 };
 
 const dashboardslice = createSlice({
@@ -79,6 +87,9 @@ const dashboardslice = createSlice({
     setDevice(state, { payload }) {
       state.mainmenu.devices = payload;
     },
+    setAnalyticsselectedItem(state, { payload }) {
+      state.analytics.selectedItem = payload;
+    },
   },
 });
 
@@ -92,5 +103,6 @@ export const {
   setDailyMonthy,
   setSnackbar,
   setUserId,
+  setAnalyticsselectedItem,
 } = dashboardslice.actions;
 export default dashboardslice.reducer;

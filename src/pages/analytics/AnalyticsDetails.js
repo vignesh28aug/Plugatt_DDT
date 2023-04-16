@@ -40,6 +40,7 @@ import EChartsReact from "echarts-for-react";
 import Voltage from "../../assets/voltage-indicator.png";
 import { TextField, Typography } from "@mui/material";
 import "./analytics.css";
+import { useSelector } from "react-redux";
 
 const Item = styled(Paper)(({ theme }) => ({
   backgroundColor: "#191c24",
@@ -50,58 +51,86 @@ const Item = styled(Paper)(({ theme }) => ({
 }));
 
 function AnalyticsDetails({ details }) {
-  console.log({details});
-  const [threeconsuption, setThreeConsumtion] = useState("28");
+  console.log({ details });
+  const { selectedItem } = useSelector(
+    (state) => state.dashboardreducer.analytics
+  );
   const mockdata1 = {
     timestamp: [12, 22, 21, 21, 22],
     value: [18, 36, 20, 32, 11, 20],
   };
+
   return (
     // <Box sx={{ flexGrow: 0 }}>
     <Grid container spacing={2} rowGap={2}>
-      <Grid  container
+      <Grid
+        container
         maxWidth="calc(100% - 20px)"
         className="container_with_shadow"
-        justifyContent="center" md={8} lg={8} sm={8}>
-        {/* <Item className="analyticsTop"> */}
-        <Grid md={4} lg={4} sm={4}>
-        <Chart
-          key={threeconsuption}
-          options={options2.options("Total Cities", threeconsuption, "#f368e0")}
-          series={options2.series(75)}
-          type="radialBar"
-          height="220"
-        />
+        justifyContent="center"
+      >
+        <Grid md={3} lg={3} sm={3}>
+          <Chart
+            key={selectedItem.totalVoltage}
+            options={options2.options(
+              "Total Cities",
+              selectedItem.totalCities,
+              "#ea5545"
+            )}
+            series={options2.series(75)}
+            type="radialBar"
+            height="220"
+          />
         </Grid>
-        <Grid md={4} lg={4} sm={4}>
-        <Chart
-          key={threeconsuption}
-          options={options2.options("Total Nodes", threeconsuption, "#f368e0")}
-          series={options2.series(75)}
-          type="radialBar"
-          height="220"
-        />
+        <Grid md={3} lg={3} sm={3}>
+          <Chart
+            key={selectedItem.totalNodes}
+            options={options2.options(
+              "Total Nodes",
+              selectedItem.totalNodes,
+              "#f46a9b"
+            )}
+            series={options2.series(75)}
+            type="radialBar"
+            height="220"
+          />
         </Grid>
-        <Grid md={4} lg={4} sm={4}>
-        <Chart
-          key={threeconsuption}
-          options={options2.options("Total Zones", threeconsuption, "#f368e0")}
-          series={options2.series(75)}
-          type="radialBar"
-          height="220"
-        />
+        <Grid md={3} lg={3} sm={3}>
+          <Chart
+            key={selectedItem.totalZones}
+            options={options2.options(
+              "Total Zones",
+              selectedItem.totalZones,
+              "#ef9b20"
+            )}
+            series={options2.series(75)}
+            type="radialBar"
+            height="220"
+          />
         </Grid>
-        {/* </Item> */}
+
+        <Grid md={3} lg={3} sm={3}>
+          <Chart
+            key={selectedItem.totalZones}
+            options={options2.options(
+              "Total Voltage",
+              selectedItem.totalVoltage,
+              "#edbf33"
+            )}
+            series={options2.series(75)}
+            type="radialBar"
+            height="220"
+          />
+        </Grid>
       </Grid>
-      <Grid item md={3} lg={3} className="container_with_shadow">
-        {/* <Item className="analyticsTop"> */}
+      {/* <Grid item md={3} lg={3} className="container_with_shadow">
         <div className="analyticsRight container_with_shadow">
           <div className="power_mainmenu">
             <Typography className="text_grey">
               <b>Total Voltage</b>
             </Typography>
             <Typography variant="h6" className="power_values">
-              85
+              {selectedItem.totalVoltage}
               <span className="power_units">
                 <sup>V</sup>
               </span>
@@ -111,12 +140,11 @@ function AnalyticsDetails({ details }) {
             <img src={Voltage} height="40px" alt="voltage" />
           </div>
         </div>
-        {/* </Item> */}
-      </Grid>
+        </Grid> */}
       <Grid item md={12} className="analyticsBottom container_with_shadow">
         {/* <Item> */}
         <EChartsReact
-          style={{ height: "280px" }}
+          style={{ height: "200px" }}
           option={optionbarchart(mockdata1.timestamp, mockdata1.value, [
             "#bdcf32",
             "#87bc45",

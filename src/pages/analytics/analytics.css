@@ -9,12 +9,12 @@
   width: 100px;
 } */
 .analyticsBottom {
-  height: 290px;
+  height: 220px;
 }
 .analyticsTop {
   height: 200px;
 }
-.analyticsRight{
+.analyticsRight {
   display: flex;
   justify-content: space-between;
   /* width: 100%; */
