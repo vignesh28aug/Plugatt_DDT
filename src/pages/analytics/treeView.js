@@ -1,11 +1,11 @@
 import * as React from "react";
 import TreeView from "@mui/lab/TreeView";
-import ExpandMoreIcon from "@mui/icons-material/ExpandMore";
-import ChevronRightIcon from "@mui/icons-material/ChevronRight";
+// import ExpandMoreIcon from "@mui/icons-material/ExpandMore";
+// import ChevronRightIcon from "@mui/icons-material/ChevronRight";
 import TreeItem from "@mui/lab/TreeItem";
-import { useCallback } from "react";
-import SvgIcon, { SvgIconProps } from "@mui/material/SvgIcon";
-import AnalyticsDetails from "./AnalyticsDetails";
+// import { useCallback } from "react";
+// import SvgIcon, { SvgIconProps } from "@mui/material/SvgIcon";
+// import AnalyticsDetails from "./AnalyticsDetails";
 import LocationCityOutlinedIcon from "@mui/icons-material/LocationCityOutlined";
 import "../../App.css";
 import { useDispatch } from "react-redux";
@@ -20,6 +20,10 @@ function FileSystemNavigator() {
       totalVoltage: 2969,
       totalNodes: 210,
       value: 34,
+      mockdata1 : {
+        timestamp: [12, 22, 21, 21, 22],
+        value: [18, 36, 20, 32, 11],
+      }
     },
     {
       id: 2,
@@ -28,6 +32,82 @@ function FileSystemNavigator() {
       totalVoltage: 4969,
       totalNodes: 10,
       value: 4,
+      mockdata1 : {
+        timestamp: [29, 42, 12, 13, 19],
+        value: [98, 56, 123, 73, 61],
+      }
+    },
+    {
+      id: 3,
+      totalCities: 60,
+      totalZones: 12,
+      totalVoltage: 969,
+      totalNodes: 16,
+      value: 4,
+      mockdata1 : {
+        timestamp: [12, 22, 21, 21, 22],
+        value: [18, 36, 20, 32, 11],
+      }
+    },
+    {
+      id: 11,
+      totalCities: 280,
+      totalZones: 230,
+      totalVoltage: 2969,
+      totalNodes: 210,
+      value: 34,
+      mockdata1 : {
+        timestamp: [12, 22, 21, 21, 22],
+        value: [18, 36, 20, 32, 11],
+      }
+    },
+    {
+      id: 12,
+      totalCities: 100,
+      totalZones: 20,
+      totalVoltage: 4969,
+      totalNodes: 10,
+      value: 4,
+      mockdata1 : {
+        timestamp: [54, 35, 11, 26, 18],
+        value: [76, 49, 65, 14, 43],
+      }
+    },
+    {
+      id: 13,
+      totalCities: 60,
+      totalZones: 12,
+      totalVoltage: 969,
+      totalNodes: 16,
+      value: 4,
+      mockdata1 : {
+        timestamp: [12, 22, 21, 21, 22],
+        value: [18, 36, 20, 32, 11],
+      }
+    },
+    {
+      id: 5,
+      totalCities: 60,
+      totalZones: 12,
+      totalVoltage: 969,
+      totalNodes: 16,
+      value: 4,
+      mockdata1 : {
+        timestamp: [12, 22, 21, 21, 22],
+        value: [18, 36, 20, 32, 11],
+      }
+    },
+    {
+      id: 6,
+      totalCities: 100,
+      totalZones: 20,
+      totalVoltage: 4969,
+      totalNodes: 10,
+      value: 4,
+      mockdata1 : {
+        timestamp: [129, 242, 121, 86, 198],
+        value: [180, 236, 120, 332, 211],
+      }
     },
   ];
 
@@ -51,7 +131,7 @@ function FileSystemNavigator() {
           nodeId: 5,
           children: [
             {
-              id: "zone1",
+              id: "zone2",
               nodeId: 6,
             },
           ],
@@ -59,7 +139,7 @@ function FileSystemNavigator() {
       ],
     },
     {
-      id: "city",
+      id: "Bengaluru",
       nodeId: 11,
       children: [
         {

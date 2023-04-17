@@ -31,9 +31,9 @@ function App() {
               <Route
                 path="registration"
                 element={
-                  <AuthGaurd>
+                  // <AuthGaurd>
                     <Signup />
-                  </AuthGaurd>
+                  // </AuthGaurd>
                 }
               />
               <Route path="forgotpassword" element={<ForgotPassword />} />

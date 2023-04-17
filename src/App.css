@@ -8,7 +8,7 @@ body {
 }
 .container_with_shadow {
   padding: 10px;
-  margin:0px 10px;
+  /* margin:0px 10px; */
   background-color: #191c24;
   border-radius: 5px;
 }
@@ -22,7 +22,6 @@ body {
   color: #00d25b;
   font-size: 15px;
 }
-#treeview_title{
+/* #treeview_title{
   font-size: 31px;
-  /* height: 50px; */
-}
+} */

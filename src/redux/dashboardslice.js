@@ -48,6 +48,10 @@ const initialState = {
       totalCities: 0,
       totalVoltage: 0,
       value: 0,
+      mockdata1:{
+        timestamp: [],
+        value: []
+      }
     },
   },
 };
