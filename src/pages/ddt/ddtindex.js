@@ -3,7 +3,8 @@ import React from "react";
 // import CustomizedTreeView from "./treeView";
 // import AnalyticsDetails, { Chartdata } from "./AnalyticsDetails";
 import CustomizedTreeView from "../analytics/treeView";
-import AnalyticsDetails, { Chartdata} from "../analytics/AnalyticsDetails";
+// import AnalyticsDetails, { Chartdata} from "../analytics/AnalyticsDetails";
+import DdtDetails,{ Chartdata} from "./ddtdetails";
 // import { Map } from "./map";
 function DdtIndex() {
   return (
@@ -13,7 +14,7 @@ function DdtIndex() {
           <CustomizedTreeView />
         </Grid>
         <Grid item md={9} sm={9} lg={9}>
-          <AnalyticsDetails />
+          <DdtDetails />
         </Grid>
       </Grid>
 

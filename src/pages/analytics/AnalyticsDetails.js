@@ -48,7 +48,7 @@ function AnalyticsDetails({ details }) {
             height="220"
           />
           <Typography className="consumptionunit" variant="subtitle2">
-            5 - 8
+            Cities
           </Typography>
         </Grid>
         <Grid item md={3} lg={3} sm={3}>
@@ -64,7 +64,7 @@ function AnalyticsDetails({ details }) {
             height="220"
           />
           <Typography className="consumptionunit" variant="subtitle2">
-            12 - 14
+            Zones
           </Typography>
         </Grid>
         <Grid item md={3} lg={3} sm={3}>
@@ -80,7 +80,7 @@ function AnalyticsDetails({ details }) {
             height="220"
           />
         <Typography className="consumptionunit" variant="subtitle2">
-          18 - 21
+          Nodes
         </Typography>
         </Grid>
 
