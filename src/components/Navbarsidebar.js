@@ -34,7 +34,13 @@ export default function NavbarSIdebar() {
     {
       icon: "Analytics",
       link: "analytics",
-      text: "Analytics",
+      text: "Demand Monitoring",
+      color: "#0090e7",
+    },
+    {
+      icon: "Analytics",
+      link: "ddt",
+      text: "DDT",
       color: "#0090e7",
     },
   ];
@@ -121,18 +127,6 @@ export default function NavbarSIdebar() {
                 <Typography variant="subtitle2" sx={{ color: "#6c7281" }}>
                   Admin
                 </Typography>
-
-                {/* <Button
-                  startIcon={
-                    <Avatar>
-                      <Logout sx={{ color: "red" }} />
-                    </Avatar>
-                  }
-                  onClick={logout}
-                  sx={{ textTransform: "none" }}
-                >
-                  Log Out
-                </Button> */}
               </Stack>
 
               <Tooltip

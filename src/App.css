@@ -7,10 +7,11 @@ body {
   overflow-x: hidden;
 }
 .container_with_shadow {
-  padding: 10px;
+  padding: 5px;
   /* margin:0px 10px; */
   background-color: #191c24;
   border-radius: 5px;
+  margin-bottom: 5px;
 }
 .text_grey {
   color: white;

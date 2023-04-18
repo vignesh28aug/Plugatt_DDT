@@ -29,11 +29,6 @@ const paperstyle = {
 };
 
 function ForgotPassword() {
-  // const [snackbar, ] = useState({
-  //   open: false,
-  //   message: "",
-  //   severity: "",
-  // });
   const dispatch = useDispatch();
   const snackbar = useSelector((state) => state.dashboardreducer.snackbar);
 

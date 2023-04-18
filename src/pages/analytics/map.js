@@ -1,4 +1,3 @@
-// import { world_map } from './world-map.ts';
 import { world_map } from './world_map.js';
 import * as React from 'react';
 import {
@@ -15,7 +14,12 @@ import {
 
 export function Map() {
   return (
-    <div><MapsComponent  zoomSettings={{
+    <div><MapsComponent background="#191c24" mapsArea={{
+      background: '#191c24',
+      border: {
+          width: 2,
+          // color: 'green'
+      } }} zoomSettings={{
       enable: true,
       toolbars: [ 'ZoomIn', 'ZoomOut'],
     }}> 

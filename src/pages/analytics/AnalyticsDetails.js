@@ -1,24 +1,22 @@
 import * as React from "react";
-import { styled } from "@mui/material/styles";
-import Paper from "@mui/material/Paper";
+// import { styled } from "@mui/material/styles";
+// import Paper from "@mui/material/Paper";
 import Grid from "@mui/material/Grid";
 import Chart from "react-apexcharts";
 import { options2 } from "./utilities";
-import { useState } from "react";
 import { optionbarchart } from "./utilities";
 import EChartsReact from "echarts-for-react";
-import Voltage from "../../assets/voltage-indicator.png";
-import { TextField, Typography } from "@mui/material";
 import "./analytics.css";
 import { useSelector } from "react-redux";
+import { Typography } from "@mui/material";
 
-const Item = styled(Paper)(({ theme }) => ({
-  backgroundColor: "#191c24",
-  ...theme.typography.body2,
-  padding: theme.spacing(1),
-  textAlign: "center",
-  color: theme.palette.text.secondary,
-}));
+// const Item = styled(Paper)(({ theme }) => ({
+//   backgroundColor: "#191c24",
+//   ...theme.typography.body2,
+//   padding: theme.spacing(1),
+//   textAlign: "center",
+//   color: theme.palette.text.secondary,
+// }));
 
 function AnalyticsDetails({ details }) {
   const { selectedItem } = useSelector(
@@ -37,11 +35,11 @@ function AnalyticsDetails({ details }) {
         className="container_with_shadow"
         justifyContent="center"
       >
-        <Grid md={3} lg={3} sm={3}>
+        <Grid item md={3} lg={3} sm={3}>
           <Chart
             key={selectedItem.totalVoltage}
             options={options2.options(
-              "Total Cities",
+              "Total Demand",
               selectedItem.totalCities,
               "#ea5545"
             )}
@@ -49,12 +47,15 @@ function AnalyticsDetails({ details }) {
             type="radialBar"
             height="220"
           />
+          <Typography className="consumptionunit" variant="subtitle2">
+            5 - 8
+          </Typography>
         </Grid>
-        <Grid md={3} lg={3} sm={3}>
+        <Grid item md={3} lg={3} sm={3}>
           <Chart
             key={selectedItem.totalNodes}
             options={options2.options(
-              "Total Nodes",
+              "Total Demand",
               selectedItem.totalNodes,
               "#f46a9b"
             )}
@@ -62,12 +63,15 @@ function AnalyticsDetails({ details }) {
             type="radialBar"
             height="220"
           />
+          <Typography className="consumptionunit" variant="subtitle2">
+            12 - 14
+          </Typography>
         </Grid>
-        <Grid md={3} lg={3} sm={3}>
+        <Grid item md={3} lg={3} sm={3}>
           <Chart
             key={selectedItem.totalZones}
             options={options2.options(
-              "Total Zones",
+              "Total Demand",
               selectedItem.totalZones,
               "#ef9b20"
             )}
@@ -75,13 +79,16 @@ function AnalyticsDetails({ details }) {
             type="radialBar"
             height="220"
           />
+        <Typography className="consumptionunit" variant="subtitle2">
+          18 - 21
+        </Typography>
         </Grid>
 
-        <Grid md={3} lg={3} sm={3}>
+        <Grid item md={3} lg={3} sm={3}>
           <Chart
             key={selectedItem.totalZones}
             options={options2.options(
-              "Total Voltage",
+              "Total Demand",
               selectedItem.totalVoltage,
               "#edbf33"
             )}
@@ -89,10 +96,13 @@ function AnalyticsDetails({ details }) {
             type="radialBar"
             height="220"
           />
+          <Typography className="consumptionunit" variant="subtitle2">
+            Real Time
+          </Typography>
         </Grid>
       </Grid>
 
-      <Grid item md={12} className="analyticsBottom container_with_shadow">
+      {/* <Grid item md={12} className="analyticsBottom container_with_shadow">
         <EChartsReact
           style={{ height: "200px" }}
           option={optionbarchart(selectedItem.mockdata1.timestamp ,selectedItem.mockdata1.value , [
@@ -102,8 +112,51 @@ function AnalyticsDetails({ details }) {
             "#b33dc6",
           ])}
         />
-      </Grid>
+      </Grid> */}
     </Grid>
   );
 }
 export default AnalyticsDetails;
+
+export function Chartdata({ details }){
+  const { selectedItem } = useSelector(
+    (state) => state.dashboardreducer.analytics
+  );
+  return (
+    <>
+      <Grid item md={12} sx={{ml:'10px',mb:'5px'}} className="analyticsBottom container_with_shadow">
+      <Grid>
+      <Typography>
+          <b>Daily</b>
+        </Typography>
+        <EChartsReact
+          style={{ height: "200px" }}
+          option={optionbarchart(selectedItem.mockdata1.timestamp ,selectedItem.mockdata1.value , [
+            "#bdcf32",
+            "#87bc45",
+            "#27aeef",
+            "#b33dc6",
+          ])}
+        />
+      </Grid>      
+      </Grid>
+      <Grid item md={12} sx={{ml:'10px',mb:'5px'}} className="analyticsBottom container_with_shadow">
+      <Grid>
+      <Typography>
+          <b>Weekly</b>
+        </Typography>
+        <EChartsReact
+          style={{ height: "200px" }}
+          option={optionbarchart(selectedItem.mockdata1.timestamp ,selectedItem.mockdata1.value , [
+            "#bdcf32",
+            "#87bc45",
+            "#27aeef",
+            "#b33dc6",
+          ])}
+        />
+      </Grid>      
+      </Grid>
+    </>
+  )
+}
+// export default Chartdata;

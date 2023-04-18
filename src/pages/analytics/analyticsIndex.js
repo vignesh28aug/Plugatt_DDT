@@ -1,7 +1,7 @@
 import { Grid } from "@mui/material";
 import React from "react";
 import CustomizedTreeView from "./treeView";
-import AnalyticsDetails from "./AnalyticsDetails";
+import AnalyticsDetails, { Chartdata } from "./AnalyticsDetails";
 import { Map } from "./map";
 function AnalyticsIndex() {
   return (
@@ -15,9 +15,13 @@ function AnalyticsIndex() {
         </Grid>
       </Grid>
 
-      <Grid container>
-        <Grid item md={12} sx={{marginTop:'10px'}}>
+      <Grid container >
+        <Grid item md={5} sx={{marginTop:'10px'}}>
           <Map />
+        </Grid>
+        <Grid item md={7} sx={{marginTop:'10px'}} rowSpacing={2}>
+          <Chartdata />
+          {/* <Chartdata /> */}
         </Grid>
       </Grid>
     </div>

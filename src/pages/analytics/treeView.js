@@ -1,11 +1,6 @@
 import * as React from "react";
 import TreeView from "@mui/lab/TreeView";
-// import ExpandMoreIcon from "@mui/icons-material/ExpandMore";
-// import ChevronRightIcon from "@mui/icons-material/ChevronRight";
 import TreeItem from "@mui/lab/TreeItem";
-// import { useCallback } from "react";
-// import SvgIcon, { SvgIconProps } from "@mui/material/SvgIcon";
-// import AnalyticsDetails from "./AnalyticsDetails";
 import LocationCityOutlinedIcon from "@mui/icons-material/LocationCityOutlined";
 import "../../App.css";
 import { useDispatch } from "react-redux";
@@ -117,21 +112,21 @@ function FileSystemNavigator() {
       nodeId: 1,
       children: [
         {
-          id: "node1",
+          id: "zone1",
           nodeId: 2,
           children: [
             {
-              id: "zone1",
+              id: "node1",
               nodeId: 3,
             },
           ],
         },
         {
-          id: "node2",
+          id: "zone2",
           nodeId: 5,
           children: [
             {
-              id: "zone2",
+              id: "node2",
               nodeId: 6,
             },
           ],
@@ -143,11 +138,11 @@ function FileSystemNavigator() {
       nodeId: 11,
       children: [
         {
-          id: "Node 1",
+          id: "zone 1",
           nodeId: 12,
           children: [
             {
-              id: "zone 1",
+              id: "Node 1",
               nodeId: 13,
             },
           ],
@@ -178,7 +173,7 @@ function FileSystemNavigator() {
         />
       }
       sx={{
-        height: 340,
+        // height: 340,
         width: 200,
         overflowY: "auto",
       }}

@@ -14,6 +14,8 @@ import Footer from "./components/footer";
 import Device from "./Devices/Device";
 import { QueryClient, QueryClientProvider } from "react-query";
 import AnalyticsIndex from "./pages/analytics/analyticsIndex";
+import DdtIndex from "./pages/ddt/ddtindex";
+// import DdtIndex from "./pages/ddt/ddtIndex";
 const reducer = { dashboardreducer };
 const store = configureStore({
   reducer,
@@ -47,6 +49,7 @@ function App() {
                 }
               >
                 <Route path="analytics" element={<AnalyticsIndex />} />
+                <Route path="ddt" element={<DdtIndex />} />
               </Route>
               <Route path="*" element={<>404 not found</>} />
             </Routes>
