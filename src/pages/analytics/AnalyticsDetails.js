@@ -88,7 +88,7 @@ function AnalyticsDetails({ details }) {
           <Chart
             key={selectedItem.totalZones}
             options={options2.options(
-              "Total Demand",
+              "Total Users",
               selectedItem.totalVoltage,
               "#edbf33"
             )}
@@ -96,9 +96,9 @@ function AnalyticsDetails({ details }) {
             type="radialBar"
             height="220"
           />
-          <Typography className="consumptionunit" variant="subtitle2">
+          {/* <Typography className="consumptionunit" variant="subtitle2">
             Real Time
-          </Typography>
+          </Typography> */}
         </Grid>
       </Grid>
 
